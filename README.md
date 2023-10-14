@@ -10,6 +10,8 @@ Noise in 1/f creates straight, "striped" structures in the detector images, char
 
 ⚠️ The routine is used to correct NIRCam images and NIRSpec data-cubes. However, it cannot yet correct MIRI images and MRS data. A future version including this is planned. 
 
+Please cite this work and/or reference Delabrosse et al. 2023 (in prep.) if you use this project with your JWST observations.
+
 # Getting Started 
 This section describes the important prerequisites before using the routine.
 

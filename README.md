@@ -1,16 +1,6 @@
 # JWST-Background-Noise-Removal
 Routine used to correct the 1/f correlated noise observed in the detector images of the JWST instruments.
 
-# Summary
-* **[About The Project](#about-the-project)**
-* **[Getting Started](#getting-started)**
-	* [Requirements](#requirements)
-	* [Installation](#installation)
-* **[Usage Example](#usage-example)**
-* **[References](#references)**
-* **[Contacts](#contacts)**
-
-
 # About The Project 
 All the JWST data show a particular structure known as '1/f correlated noise' (Rauscher et al. 2011). Indeed, all the instruments on the telescope are connected to a pixel reading device (SIDECAR ASIC), which generates a 'banded' structure in the detector images background. Because of the random processes at its origin, it is difficult to characterise it. 
 
@@ -65,6 +55,9 @@ result = spec3(asn_file)
 
 Beforehand, it is preferable to create the 'output files' and 'figures' directories which will respectively contain the noise-corrected files and the figures showing the images before and after correction. If this is not the case, the routine will create the necessary directories.
 
+<p align="center">
+	<img src="" width="500">
+</p>
 
 # References 
 Rauscher, B. J., Arendt, R. G., Fixen, D. J., et al. 2011, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 8155, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 81550C

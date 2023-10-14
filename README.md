@@ -58,7 +58,7 @@ result = spec3(asn_file)
 Beforehand, it is preferable to create the 'output files' and 'figures' directories which will respectively contain the noise-corrected files and the figures showing the images before and after correction. If this is not the case, the routine will create the necessary directories.
 
 <p align="center">
-	<img src="" width="500">
+	<img src="https://github.com/delabrov/JWST-Background-Noise-Removal/blob/main/ressources/beforeCorr_01_02101_00001_nrs2_rate.pdf" width="500">
 </p>
 
 # References 

@@ -10,10 +10,10 @@ Noise in 1/f creates straight, "striped" structures in the detector images, char
 
 ⚠️ The routine is used to correct NIRCam images and NIRSpec data-cubes. However, it cannot yet correct MIRI images and MRS data. A future version including this is planned. 
 
-Please cite this work and/or reference Delabrosse et al. 2023 (in prep.) if you use this project with your JWST observations.
+⚠️ Please cite this work and/or reference Delabrosse et al. 2023 (in prep.) if you use this project with your JWST observations.
 
 # Getting Started 
-This section describes the important prerequisites before using the routine.
+
 
 ## Requirements 
 To use the routine, you need to have installed the 'jwst' module for reducing JWST data. If this is not the case, please refer to [<u>**this page**</u>](https://jwst-pipeline.readthedocs.io/en/latest/getting_started/quickstart.html). 
@@ -55,14 +55,26 @@ result = spec3(asn_file)
 
 ```
 
-Beforehand, it is preferable to create the 'output files' and 'figures' directories which will respectively contain the noise-corrected files and the figures showing the images before and after correction. If this is not the case, the routine will create the necessary directories.
+Beforehand, it is preferable to create the 'output files' and 'figures' directories which will respectively contain the noise-corrected files and the figures showing the images before and after correction. If this is not the case the routine will create the necessary directories.
 
 <p align="center">
-	<img src="" width="500">
+	<img src="https://github.com/delabrov/JWST-Background-Noise-Removal/blob/main/figures/beforeCorr_jw01644006001_05101_00001_nrs2_rate.png" width="400">
+	<img src="https://github.com/delabrov/JWST-Background-Noise-Removal/blob/main/figures/afterCorr_jw01644006001_05101_00001_nrs2_rate.png" width="400">
 </p>
+
+The two Figures above show the impact of 1/f noise correction on a detector image from the NIRSpec instrument. The Figure on the left shows the initial image, without noise correction (output file from 'Detector1'). The Figure on the right shows this same image but after running the correction routine. The bottom and right panels of the image show the average pixel values ​​in both dimensions.
+
+<p align="center">
+	<img src="https://github.com/delabrov/JWST-Background-Noise-Removal/blob/main/figures/medianMap_jw01644006001_05101_00001_nrs2_rate.png" width="400">
+</p>
+
+The last Figure shows a map of the estimated median values ​​for each column of pixels in the image. These values ​​are the ones used to subtract the pixel values.
 
 # References 
 Rauscher, B. J., Arendt, R. G., Fixen, D. J., et al. 2011, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 8155, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, 81550C
+
+# Credits
+* [**Valentin Delabrosse**](https://github.com/delabrov) : Creator of the project
 
 # Contacts 
 If you have any problems, please contact me by e-mail: valentin.delabrosse@univ-grenoble-alpes.fr

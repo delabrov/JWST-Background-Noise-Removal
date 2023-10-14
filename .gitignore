@@ -162,4 +162,3 @@ cython_debug/
 # Science Directories
 /input_files/
 /output_files/
-/figures/

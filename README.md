@@ -40,7 +40,7 @@ results = det1(uncal_files)
 sstring = 'input_files/*rate.fits'
 rateFiles = sorted(glob.glob(sstring))
 
-bgd_noise_removal(rateFiles, saveplot=True) # The files are saved directly in an 'output_files' folder
+bgd_noise_removal(rateFiles, saveplot=True) # The files are saved directly in an 'output_files' directory
 # Default parameters can be modified (see function documentation)
 
 # Second step: Spec2

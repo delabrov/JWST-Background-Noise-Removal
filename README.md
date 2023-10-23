@@ -18,10 +18,10 @@ Noise in 1/f creates straight, "striped" structures in the detector images, char
 ## Requirements 
 To use the routine, you need to have installed the 'jwst' module for reducing JWST data. If this is not the case, please refer to [<u>**this page**</u>](https://jwst-pipeline.readthedocs.io/en/latest/getting_started/quickstart.html). 
 
-Before using the routine, it is important to create a directory named 'input_files' containing files with the suffix '_rate'.
+Before using the routine, it is important to create a directory named 'input_files' containing files with the '_rate' suffix.
 
 ## Installation 
-To use the correction routine, the easiest way is to save the 'remBgdNoise.py' file in the directory containing your data reduction code. Otherwise, pay attention to the directory tree of your files when you want to import the functions into your main file. 
+To use the correction routine, the easiest way is to save the 'remBgdNoise.py' file in the directory containing your data reduction code. Otherwise, pay attention to the directory arborescence when you want to import the functions into your main file. 
 
 # Usage Example 
 Here is an example of how to use the routine for NIRSpec IFU observations: (Obviously the code is not complete, but gives an idea of ​​how to use the routine)
@@ -40,7 +40,7 @@ results = det1(uncal_files)
 sstring = 'input_files/*rate.fits'
 rateFiles = sorted(glob.glob(sstring))
 
-bgd_noise_removal(rateFiles, saveplot=True) # The files are saved directly in an 'output_files' folder
+bgd_noise_removal(rateFiles, saveplot=True) # The files are saved directly in an 'output_files' directory
 # Default parameters can be modified (see function documentation)
 
 # Second step: Spec2

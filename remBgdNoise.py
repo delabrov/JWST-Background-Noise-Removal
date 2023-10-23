@@ -154,6 +154,24 @@ def corr_img_NIRCam(img, threshold, return_means=False):
 
 
 def bgd_noise_removal(rate_files, max_count_value=0.5, threshold_factor=1.5, saveplot=False):
+    """Corrects the intermediate files in the JWST pipeline (output from the Detector1 step
+    with the suffix _rate) for 1/f correlated noise.
+
+    Parameters
+    ----------
+    rate_files : str or list
+        Names of files to be corrected. If several files are given as input, the names must be stored in a list.
+    max_count_value : float, optional
+        Max value used to remove values above this in the counts histogram and to adjust the profile using a Gaussian.
+    threshold_factor : float, optional
+        Multiplication factor applied to the width of the Gaussian (corresponding to the dispersion of the background
+        values) as a threshold to exclude count values in the estimation of the median in each slit.
+    saveplot : bool, optional
+        If True, saves the images before and after correction, the median value map and the count histogram.
+    Returns
+    -------
+
+    """
 
     # Instruments
     instrumes_expected = ['NIRSPEC', 'NIRCAM']
